@@ -14,7 +14,6 @@ CREATE TABLE `products` (
   `name` varchar(200) NOT NULL,
   `desc` text NOT NULL,
   `price` decimal(7,2) NOT NULL,
-  `rrp` decimal(7,2) NOT NULL DEFAULT 0.00,
   `quantity` int(11) NOT NULL,
   `img` text NOT NULL,
   `date_added` datetime NOT NULL DEFAULT current_timestamp()
@@ -24,13 +23,13 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `desc`, `price`, `rrp`, `quantity`, `img`, `date_added`) VALUES
-(1, 'Blue Moon', 'Blue Moon Beer', '19.99', '0.00', 50, 'bluemoon.png', '2021-03-13 17:55:22'),
-(2, 'Budweiser', 'Budweiser Beer', '14.99', '19.99', 50, 'budweiser.png', '2021-03-13 18:52:49'),
-(3, 'Budlight', '', '19.99', '0.00', 50, 'budlight.png', '2021-03-13 18:47:56'),
-(4, 'Coors Light', '', '19.99', '0.00', 50, 'coors.png', '2021-03-13 17:42:04'),
-(6, 'Voodoo Ranger', '', '19.99', '0.00', 50, 'voodooranger.png', '2021-04-24 23:15:33'),
-(7, 'Delirium', 'You\'ll be feeling delirious soon.', '25.99', '0.00', 50, 'delirium.png', '2021-04-24 23:15:33');
+INSERT INTO `products` (`id`, `name`, `desc`, `price`, `quantity`, `img`, `date_added`) VALUES
+(1, 'Blue Moon', 'Blue Moon Beer', '19.99', 50, 'bluemoon.png', '2021-03-13 17:55:22'),
+(2, 'Budweiser', 'Budweiser Beer', '14.99', 50, 'budweiser.png', '2021-03-13 18:52:49'),
+(3, 'Budlight', '', '19.99', 50, 'budlight.png', '2021-03-13 18:47:56'),
+(4, 'Coors Light', '', '19.99', 50, 'coors.png', '2021-03-13 17:42:04'),
+(6, 'Voodoo Ranger', '', '19.99', 50, 'voodooranger.png', '2021-04-24 23:15:33'),
+(7, 'Delirium', 'You will be feeling delirious soon.', '25.99', 50, 'delirium.png', '2021-04-24 23:15:33');
 
 --
 -- Indexes for dumped tables
