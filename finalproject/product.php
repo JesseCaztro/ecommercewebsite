@@ -1,9 +1,9 @@
 <?php
 // Check to make sure the id parameter is specified in the URL
-if (isset($_GET['id'])) {
+if (isset($_GET['productId'])) {
     // Prepare statement and execute, prevents SQL injection
-    $stmt = $pdo->prepare('SELECT * FROM products WHERE id = ?');
-    $stmt->execute([$_GET['id']]);
+    $stmt = $pdo->prepare('SELECT * FROM products WHERE productId = ?');
+    $stmt->execute([$_GET['productId']]);
     // Fetch the product from the database and return the result as an Array
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
     // Check if the product exists (array is not empty)
@@ -30,7 +30,7 @@ if (isset($_GET['id'])) {
         </span>
         <form action="index.php?page=cart" method="post">
             <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
-            <input type="hidden" name="product_id" value="<?=$product['id']?>">
+            <input type="hidden" name="product_id" value="<?=$product['productId']?>">
             <input type="submit" value="Add To Cart">
         </form>
         <div class="description">
