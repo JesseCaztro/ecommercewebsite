@@ -7,8 +7,8 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?=template_header('Home')?>
 
 <div class="featured">
-    <h2>SpeakEasy</h2>
-    <p>Something to calm your nerves</p>
+    <h2>Liquorland</h2>
+    <p>All your liquor needs</p>
 </div>
 <div class="recentlyadded content-wrapper">
     <h2>Recently Added Products</h2>
