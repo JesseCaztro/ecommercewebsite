@@ -21,11 +21,11 @@ CREATE TABLE `product` (
 --
 -- Dumping data for table `product`
 --
-INSERT INTO `product` (`productId`, `name`, `price`, `madeDate`) VALUES
-(1, 'blank', 5, '2022-04-17 21:03:26'),
-(2, 'blank', 6, '2022-04-17 21:20:58'),
-(3, 'blank', 6, '2022-04-17 21:22:07'),
-(4, 'blank', 6, '2022-04-17 21:23:05');
+INSERT INTO `product` (`productId`, `name`, `desc`, `price`, `madeDate`) VALUES
+(1, 'blank','description', 5, '2022-04-17 21:03:26'),
+(2, 'blank','description', 6, '2022-04-17 21:20:58'),
+(3, 'blank','description', 6, '2022-04-17 21:22:07'),
+(4, 'blank','description', 6, '2022-04-17 21:23:05');
 -- --------------------------------------------
 
 --
