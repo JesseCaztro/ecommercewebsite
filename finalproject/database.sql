@@ -14,6 +14,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `product` (
   `productId` int(12) NOT NULL,
   `productName` varchar(255) NOT NULL,
+  `desc` varchar(255) NOT NULL,
   `price` decimal(4.2) NOT NULL,
   `madeDate` datetime NOT NULL DEFAULT current_timestamp()
 )
