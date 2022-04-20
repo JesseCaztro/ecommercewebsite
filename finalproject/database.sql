@@ -83,15 +83,14 @@ INSERT INTO `users` (`id`, `username`, `firstName`, `lastName`, `email`, `phone`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `viewcart`
+-- Table structure for table `cart`
 --
 
-CREATE TABLE `viewcart` (
+CREATE TABLE `cart` (
   `cartItemId` int(11) NOT NULL,
-  `productId` int(11) NOT NULL,
-  `itemQuantity` int(100) NOT NULL,
-  `userId` int(11) NOT NULL,
-  `addedDate` datetime NOT NULL DEFAULT current_timestamp()
+  `product_id` int(11) NOT NULL,
+  `price` decimal(4.2) NOT NULL
+  `quantity` int(100) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
