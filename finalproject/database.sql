@@ -6,26 +6,41 @@ SET time_zone = "+00:00";
 ---
 
 --- ----------------------------------
-
-
 --
 -- Table structure for table `product`
 --
-CREATE TABLE `product` (
-  `productId` int(12) NOT NULL,
-  `productName` varchar(255) NOT NULL,
-  `desc` varchar(255) NOT NULL,
-  `price` decimal(4.2) NOT NULL,
-  `madeDate` datetime NOT NULL DEFAULT current_timestamp()
-)
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `desc` text NOT NULL,
+  `price` decimal(7,2) NOT NULL,
+  `rrp` decimal(7,2) NOT NULL DEFAULT 0.00,
+  `quantity` int(11) NOT NULL,
+  `img` text NOT NULL,
+  `date_added` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
--- Dumping data for table `product`
+-- Dumping data for table `products`
 --
-INSERT INTO `product` (`productId`, `name`, `desc`, `price`, `madeDate`) VALUES
-(1, 'blank','description', 5, '2022-04-17 21:03:26'),
-(2, 'blank','description', 6, '2022-04-17 21:20:58'),
-(3, 'blank','description', 6, '2022-04-17 21:22:07'),
-(4, 'blank','description', 6, '2022-04-17 21:23:05');
+
+INSERT INTO `products` (`id`, `name`, `desc`, `price`, `rrp`, `quantity`, `img`, `date_added`) VALUES
+(1, 'Blue Moon', 'Blue Moon Beer', '19.99', '0.00', 50, 'bluemoon.png', '2021-03-13 17:55:22'),
+(2, 'Budweiser', 'Budweiser Beer', '14.99', '19.99', 50, 'budweiser.png', '2021-03-13 18:52:49'),
+(3, 'Budlight', '', '19.99', '0.00', 50, 'budlight.png', '2021-03-13 18:47:56'),
+(4, 'Coors Light', '', '19.99', '0.00', 50, 'coors.png', '2021-03-13 17:42:04'),
+(6, 'Voodoo Ranger', '', '19.99', '0.00', 50, 'voodooranger.png', '2021-04-24 23:15:33'),
+(7, 'Delirium', 'You\'ll be feeling delirious soon.', '25.99', '0.00', 50, 'delirium.png', '2021-04-24 23:15:33');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
 -- --------------------------------------------
 
 --
