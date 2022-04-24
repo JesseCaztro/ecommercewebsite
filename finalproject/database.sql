@@ -94,7 +94,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `firstName`, `lastName`, `email`, `phone`, `userType`, `password`, `joinDate`) VALUES
 (1, 'admin', 'admin', 'admin', 'admin@gmail.com', 1111111111, '1', 'admin', '2021-04-11 11:40:58'),
-(2, 'user', 'user', 'user', 'user@gmail.com', 2222222222, '0', 'user', '2021-04-11 11:40:58'),
+(2, 'user', 'user', 'user', 'user@gmail.com', 2222222222, '0', 'user', '2021-04-11 11:40:58')
 
 ;
 
@@ -107,8 +107,8 @@ INSERT INTO `users` (`id`, `username`, `firstName`, `lastName`, `email`, `phone`
 CREATE TABLE `cart` (
   `cartItemId` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `price` decimal(7,2) NOT NULL
-  `quantity` int(100) NOT NULL,
+  `price` decimal(7,2) NOT NULL,
+  `quantity` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
