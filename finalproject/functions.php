@@ -4,7 +4,7 @@ function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
     $DATABASE_PASS = '';
-    $DATABASE_NAME = 'shoppingcart';
+    $DATABASE_NAME = 'database';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
     } catch (PDOException $exception) {
@@ -12,7 +12,7 @@ function pdo_connect_mysql() {
     	exit('Failed to connect to database!');
     }
 }
-// Template header, feel free to customize this
+// Template header
 function template_header($title) {
 
 // Get the amount of items in the shopping cart, this will be displayed in the header.
@@ -30,7 +30,7 @@ echo <<<EOT
 	<body>
         <header>
             <div class="content-wrapper">
-                <h1>Speakeasy Liquor System</h1>
+                <h1>Liquorland Technologies</h1>
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="index.php?page=products">Products</a>
