@@ -10,7 +10,7 @@ if (isset($_POST['id'], $_POST['quantity']) && is_numeric($_POST['id']) && is_nu
     // Fetch the product from the database and return the result as an Array
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
     // Check if the product exists (array is not empty)
-    if ($products && $quantity > 0) {
+    if ($product && $quantity > 0) {
         // Product exists in database, now we can create/update the session variable for the cart
         if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
             if (array_key_exists($id, $_SESSION['cart'])) {
@@ -111,7 +111,7 @@ if ($products_in_cart) {
                     </td>
                     <td class="price">&dollar;<?=$product['price']?></td>
                     <td class="quantity">
-                        <input type="number" name="quantity-<?=$product['id']?>" value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
+                        <input type="number" name="quantity-<?=$products['id']?>" value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
                     </td>
                     <td class="price">&dollar;<?=$product['price'] * $products_in_cart[$product['id']]?></td>
                 </tr>

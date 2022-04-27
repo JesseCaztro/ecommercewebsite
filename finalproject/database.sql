@@ -1,14 +1,3 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
----
---- Database: `database`
----
-
---- ----------------------------------
---
--- Table structure for table `product`
---
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,

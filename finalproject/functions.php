@@ -12,7 +12,7 @@ function pdo_connect_mysql() {
     	exit('Failed to connect to database!');
     }
 }
-// Template header
+
 function template_header($title) {
 
 // Get the amount of items in the shopping cart, this will be displayed in the header.
@@ -30,7 +30,7 @@ echo <<<EOT
 	<body>
         <header>
             <div class="content-wrapper">
-                <h1>Liquorland Technologies</h1>
+                <h1>Speakeasy Liquor System</h1>
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="index.php?page=products">Products</a>
