@@ -19,9 +19,6 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <span class="name"><?=$product['name']?></span>
             <span class="price">
                 &dollar;<?=$product['price']?>
-                <?php if ($product['rrp'] > 0): ?>
-                <span class="rrp">&dollar;<?=$product['rrp']?></span>
-                <?php endif; ?>
             </span>
         </a>
         <?php endforeach; ?>
