@@ -19,19 +19,19 @@ if (isset($_GET['id'])) {
 <?=template_header('Product')?>
 
 <div class="product content-wrapper">
-    <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>">
+    <img src="imgs/<?=$products['img']?>" width="500" height="500" alt="<?=$products['name']?>">
     <div>
-        <h1 class="name"><?=$product['name']?></h1>
+        <h1 class="name"><?=$products['name']?></h1>
         <span class="price">
-            &dollar;<?=$product['price']?>
+            &dollar;<?=$products['price']?>
         </span>
         <form action="index.php?page=cart" method="post">
-            <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
-            <input type="hidden" name="product_id" value="<?=$product['productId']?>">
+            <input type="number" name="quantity" value="1" min="1" max="<?=$products['quantity']?>" placeholder="Quantity" required>
+            <input type="hidden" name="product_id" value="<?=$products['id']?>">
             <input type="submit" value="Add To Cart">
         </form>
         <div class="description">
-            <?=$product['desc']?>
+            <?=$products['desc']?>
         </div>
     </div>
 </div>
