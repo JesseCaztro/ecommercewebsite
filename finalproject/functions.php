@@ -30,12 +30,16 @@ echo <<<EOT
 	<body>
         <header>
             <div class="content-wrapper">
-                <h1>Speakeasy Liquor System</h1>
+                <h1>Liquorland Technologies</h1>
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="index.php?page=products">Products</a>
                 </nav>
                 <div class="link-icons">
+
+		    <a href="index.php?page=login">
+						<i class="fas fa-user"></i>
+					</a>
                     <a href="index.php?page=cart">
 						<i class="fas fa-shopping-cart"></i>
 						<span>$num_items_in_cart</span>
