@@ -1,9 +1,9 @@
 <html>
 <head>
-  <title>Speakeasy Search Results</title>
+  <title>Liquorland Search Results</title>
 </head>
 <body>
-<h1>Speakeasy Search Results</h1>
+<h1>Liquorland Search Results</h1>
 <?php
   // create short variable names
   $searchtype=$_POST['searchtype'];
