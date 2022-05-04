@@ -1,11 +1,11 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'functions.php';
-    $username = $_POST["loginusername"];
-    $password = $_POST["loginpassword"]; 
+    $username = $_POST["username"];
+    $password = $_POST["password"]; 
     
     $sql = "Select * from users where username='$username'"; 
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql); /* This line is causing errors*/
     $num = mysqli_num_rows($result);
     if ($num == 1){
         $row=mysqli_fetch_assoc($result);
