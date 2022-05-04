@@ -114,6 +114,29 @@ CREATE TABLE `deliverydetails` (
 
 
 
+
+
+CREATE TABLE `sitedetail` (
+  `tempId` int(11) NOT NULL,
+  `systemName` varchar(21) NOT NULL,
+  `email` varchar(35) NOT NULL,
+  `contact1` bigint(21) NOT NULL,
+  `contact2` bigint(21) DEFAULT NULL COMMENT 'Optional',
+  `address` text NOT NULL,
+  `dateTime` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sitedetail`
+--
+
+INSERT INTO `sitedetail` (`tempId`, `systemName`, `email`, `contact1`, `contact2`, `address`, `dateTime`) VALUES
+(1, 'Liqour Land', 'admin@gmail.com', 1234123123, 6786789456, '1 Normal Ave.<br> Montclair', '2022-05-01 19:56:25');
+
+-- --------------------------------------------------------
+
+
+
 --
 -- Indexes for dumped tables
 --
