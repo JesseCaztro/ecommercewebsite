@@ -196,4 +196,11 @@ ALTER TABLE `users`
 --
 ALTER TABLE `cart`
   MODIFY `cartItemId` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `sitedetail`
+--
+ALTER TABLE `sitedetail`
+  MODIFY `tempId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 COMMIT;
