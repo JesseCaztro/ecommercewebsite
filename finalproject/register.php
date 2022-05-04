@@ -21,7 +21,7 @@
 <div class="register-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="register.php" class="h1"><b>Pizza</b>Place</a>
+      <a href="register.php" class="h1"><b>Liqour</b>Land</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Register a new membership</p>
