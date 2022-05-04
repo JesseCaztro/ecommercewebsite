@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $description = $_POST["desc"];
         $price = $_POST["price"];
 
-        $sql = "INSERT INTO `product` (`name`, `price`, `desc`, `PubDate`) VALUES ('$name', '$price', '$desc', current_timestamp())";   
+        $sql = "INSERT INTO `product` (`name`, `price`, `desc`, `date_added`) VALUES ('$name', '$price', '$desc', current_timestamp())";   
         $result = mysqli_query($conn, $sql);
         $pizzaId = $conn->insert_id;
         if ($result){
