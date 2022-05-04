@@ -102,7 +102,44 @@ CREATE TABLE `cart` (
 
 
 
+--
+-- Table structure for table `orderitems`
+--
 
+CREATE TABLE `orderitems` (
+  `id` int(21) NOT NULL,
+  `orderId` int(21) NOT NULL,
+  `productId` int(21) NOT NULL,
+  `itemQuantity` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+--
+-- Indexes for table `orderitems`
+--
+ALTER TABLE `orderitems`
+  ADD PRIMARY KEY (`id`);
+  
+  
+
+CREATE TABLE `orders` (
+  `orderId` int(21) NOT NULL,
+  `userId` int(21) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `zipCode` int(21) NOT NULL,
+  `phoneNo` bigint(21) NOT NULL,
+  `amount` int(200) NOT NULL,
+  `paymentMode` enum('0','1') NOT NULL DEFAULT '0' COMMENT '0=cash on delivery, \r\n1=online ',
+  `orderStatus` enum('0','1','2','3','4','5','6') NOT NULL DEFAULT '0' COMMENT '0=Order Placed.\r\n1=Order Confirmed.\r\n2=Preparing your Order.\r\n3=Your order is on the way!\r\n4=Order Delivered.\r\n5=Order Denied.\r\n6=Order Cancelled.',
+  `orderDate` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`orderId`);
 
 
 --
