@@ -45,7 +45,7 @@
                   </div>
                   <div class="bs-stepper-content">
                     <!-- your steps content here -->
-                      <form action="FunctionsCode/loginCode.php" method="post">
+                      <form action="loginCode.php" method="post">
                           <div id="email-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
                             <div class="input-group mb-3">
                               <input type="text" id="username" name="username" class="form-control" placeholder="Username">
